@@ -21,7 +21,6 @@ func isGucioLive(client *helix.Client) bool {
 		return false
 	}
 	if len(res.Data.Streams) == 0 {
-		log.Println(res.ErrorMessage)
 		return false
 	}
 	return true
