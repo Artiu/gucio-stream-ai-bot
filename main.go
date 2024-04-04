@@ -43,7 +43,7 @@ func main() {
 				log.Printf("%v: day: %v, month: %v, weekday %v", err, day, month, weekday)
 				return
 			}
-			msg := fmt.Sprintf("Prawdopodobieństwo streama dzisiaj wynosi %v%% gucci", int(prediction*100))
+			msg := fmt.Sprintf("@%v Prawdopodobieństwo streama dzisiaj wynosi %v%% gucci", message.User.DisplayName, int(prediction*100))
 			client.Say(message.Channel, msg)
 		}
 	})
