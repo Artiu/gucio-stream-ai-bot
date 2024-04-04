@@ -25,14 +25,13 @@ func main() {
 	if twitchAccessToken == "" {
 		log.Fatal("TWITCH_ACCESS_TOKEN must be set")
 	}
-	loc, _ := time.LoadLocation("Europe/Warsaw")
 	client := twitch.NewClient("guciostreamai", "oauth:"+twitchAccessToken)
 	client.OnConnect(func() {
 		log.Println("connected to twitch")
 	})
 	client.OnPrivateMessage(func(message twitch.PrivateMessage) {
 		if strings.TrimSpace(message.Message) == "!czydzisstream" {
-			now := time.Now().In(loc)
+			now := time.Now()
 			day := now.Day()
 			month := int(now.Month())
 			weekday := int(now.Weekday()) - 1
