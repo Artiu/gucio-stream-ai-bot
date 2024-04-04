@@ -1,1 +1,1 @@
-Gucio stream ai bot przewiduje czy będzie dziś stream na podstawie [Gucio Pszemek AI](https://github.com/Artiu/gucio-pszemek-ai)
+Gucio stream ai bot przewiduje prawdopodobieństwo streama używając modelu z [Gucio Pszemek AI](https://github.com/Artiu/gucio-pszemek-ai)
